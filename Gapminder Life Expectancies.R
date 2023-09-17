@@ -161,11 +161,9 @@ summary(ANOVA)
 CONF <- countries %>% 
   aov(lifeExp ~ country, data = .) %>% 
   TukeyHSD()
-
 print(CONF)
 plot(CONF)
 
 #SAVING PLOTS AS .png FILES
 ggsave("LIFE.png", plot = LIFE, width = 14, height = 8, units = "in")
 ggsave("LIFE2.png", plot = LIFE2, width = 8, height = 6, units = "in")
-ggsave("CONF.png", plot = LIFE, width = 10, height = 8, units = "in")
