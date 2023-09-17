@@ -19,19 +19,15 @@ means <- countries %>%
   group_by(country) %>%
   summarize(means = mean(lifeExp))
 
-#SUPER MEAN: #the mean between all 3 countries.
-super_mean <- countries %>%
-  summarize(super_mean = mean(lifeExp))
-
-#SUPER MEDIAN, the median between all 3 countries:
-super_median <- countries %>%
-  summarize(super_median = median(lifeExp))
+#MEDIANS:
+medians <- countries %>%
+  group_by(country) %>%
+  summarize(medians = median(lifeExp))
 
 #STD. DEV:
 stddevs <- countries %>% 
   group_by(country) %>% 
   summarize(stddevs = sd(lifeExp))
-
 
 #DENSITY PLOT:
 DENSITY <- countries %>% 
@@ -55,8 +51,6 @@ DENSITY <- countries %>%
   theme_dark()+
   xlim(40, 90)+
   ylim(0, 0.10)
-print(DENSITY)
-
 
 #BOX PLOT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!:
 BOX <- countries %>%
@@ -79,9 +73,6 @@ BOX <- countries %>%
   ) +
   scale_x_continuous(breaks = seq(50, 85, by = 5), labels = c("50", "55", "60", "65", "70", "75", "80", "85")) +
   theme_dark()
-print(BOX)
-
-
 
 #SCATTER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 SCATTER <- countries %>%
@@ -99,17 +90,12 @@ SCATTER <- countries %>%
   ) +
   theme_dark() +
   ylim(50, 120) +
-  scale_x_continuous(breaks = seq(1952, 2007, by = 5), labels = as.character(seq(1952, 2007, by = 5))
-  ) +
+  scale_x_continuous(breaks = seq(1952, 2007, by = 5), labels = as.character(seq(1952, 2007, by = 5))) +
   geom_text(aes(label = round(lifeExp, 2)), vjust = -1, hjust = 0.5, size = 3.8, show.legend = F)
-
-
-
 
 #DENSITY 2!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 DENSITY2 <- countries %>%
-  ggplot(mapping = aes(x = lifeExp,
-                       fill = country))+
+  ggplot(mapping = aes(x = lifeExp,fill = country))+
   geom_density(alpha = 0.65, show.legend = F)+
   #mean and median lines + text:
   geom_vline(data = means, aes(xintercept = means), color = "yellow", linetype = "dashed", alpha = 0.55, size = 0.6) +
@@ -137,8 +123,6 @@ DENSITY2 <- countries %>%
   xlim(40, 90) +
   ylim(0, 0.10)    # Set the y-axis limits
 
-
-
 #BAR:!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 BAR <- countries %>%
   ggplot(mapping = aes(x = year, y = lifeExp, fill = country))+
@@ -159,11 +143,7 @@ BAR <- countries %>%
     fill = "KEY"
   )+
   #Customizes x-axis ticks (known as breaks, while the labels are the text that goes on each break.)
-  scale_x_continuous(breaks = c(1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997, 2002, 2007), 
-                     labels = c("1952", "1957", "1962", "1967", "1972", "1977", "1982", 
-                                "1987", "1992", "1997", "2002", "2007"))
-
-
+  scale_x_continuous(breaks = seq(50, 85, by = 5), labels = c("50", "55", "60", "65", "70", "75", "80", "85"))
 
 #DISPLAYING ALL PLOTS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 LIFE<- grid.arrange(SCATTER, DENSITY2, BAR, BOX, nrow = 2, ncol =2)
@@ -171,13 +151,11 @@ print(LIFE)
 LIFE2 <-grid.arrange(DENSITY, nrow = 2, ncol = 1)
 print(LIFE2)
 
-
 #ANOVA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ANOVA <- countries %>% 
   select(country, lifeExp) %>% 
   aov(lifeExp ~ country, data = .)
 summary(ANOVA)
-
 
 #DETERMINING STATISTICAL SIGNIFICANCE OF DIFFERENCES IN MEANS FOR EACH COUNTRY
 CONF <- countries %>% 
@@ -187,3 +165,7 @@ CONF <- countries %>%
 print(CONF)
 plot(CONF)
 
+#SAVING PLOTS AS .png FILES
+ggsave("LIFE.png", plot = LIFE, width = 14, height = 8, units = "in")
+ggsave("LIFE2.png", plot = LIFE2, width = 8, height = 6, units = "in")
+ggsave("CONF.png", plot = LIFE, width = 10, height = 8, units = "in")
