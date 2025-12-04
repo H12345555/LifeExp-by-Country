@@ -35,12 +35,9 @@ Bar plots with dodge positioning
 Unified multi-plot layouts using grid.arrange(), ideal for dashboards or reports
 Consistent styling (dark theme, custom labels, axis scaling)
 
-## Reproducible Workflow
-Programmatically generating and saving figures as .png files
-Modular code organization enabling easy updates or parameter changes
-Clean labeling and theming for professional-quality visual outputs
 
 ## Project Structure
+
 ### Core packages imported:
 - gapminder (data source)
 - tidyverse (data manipulation + visualization)
