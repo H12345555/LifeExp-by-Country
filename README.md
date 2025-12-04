@@ -11,15 +11,27 @@ Grouped statistical summaries (mean, median, standard deviation)
 Multi-facet visualization and plot composition with ggplot2, patchwork, and gridExtra
 Statistical inference using ANOVA and Tukey’s HSD
 Automated export of figures for reporting
-The code results in a complete suite of visualizations (density plots, boxplots, bar charts, scatterplots with trends) and statistical tests to evaluate differences in life expectancy across countries from 1957–2007.
+The code results in a complete suite of visualizations (density plots, boxplots, bar charts, scatterplots with trends) and statistical tests to evaluate differences in life expectancy across countries from 1957–2007. <br><br>
 
-## Skills Demonstrated
-- Data Wrangling & Tidy Data Principles
+## Skills Demonstrated 
+### Data Wrangling & Tidy Data Principles
 - Filtering data by target countries
 - Grouping and summarizing numeric variables
 - Using the pipe operator (%>%) to structure readable, reproducible workflows
 - Creating derived datasets capturing summary statistics for use across visualizations
 
+### Statistical Analysis
+- Descriptive statistics:<br>
+   - mean, median, and standard deviation
+- Inferential statistics:<br>
+   - ANOVA to test for differences in mean life expectancy across countries
+   - TukeyHSD post-hoc comparisons
+- Interpretation of significance and confidence intervals<br>
+
+### Reproducible Workflow
+- Programmatically generating and saving figures as .png files
+- Modular code organization enabling easy updates or parameter changes
+- Clean labeling and theming for professional-quality visual outputs<br>
 
 ### Data Visualization
 - Demonstrates advanced use of ggplot2:
@@ -28,7 +40,7 @@ The code results in a complete suite of visualizations (density plots, boxplots,
 - Scatterplots with smoothing trends and facet wrapping
 - Bar plots with dodge positioning
 - Unified multi-plot layouts using grid.arrange(), ideal for dashboards or reports
-- Consistent styling (dark theme, custom labels, axis scaling)
+- Consistent styling (dark theme, custom labels, axis scaling)<br><br>
 
 
 ## Project Structure
@@ -43,10 +55,10 @@ The code results in a complete suite of visualizations (density plots, boxplots,
 Data was filtered to include only the following countries from North America:
 - United States
 - Mexico
-- Canada<br>
+- Canada<br><br>
 
 ### Statistics Analysis:
-Analyzed the following statistical parameters of the dataset.
+Analyzed the following statistical parameters of the dataset:
 - Means
 - Medians
 - Standard deviations
@@ -57,27 +69,32 @@ Analyzed the following statistical parameters of the dataset.
 
 ### Visualization Summary and .png files exported:
 The following plots and subplots were generated using R code. All visualizations are compiled using grid.arrange() into multi-panel layouts for presentation.
-- <u>**Density Plot:**</u>	Compares distributions of life expectancy across countries
-- <u>**Boxplot:**</u>	Visualize spread, outliers, mean and median annotations
-- <u>**Scatterplot (with smoothing):**</u>	Show life expectancy trends over time (facet per country)
-- <u>**Density Plot:**</u> Compare distribution shapes with mean/median lines by country
-- <u>**Bar Chart:**</u>	Displays life expectancy values by year, grouped by country<br>
+- <u>**Density Plot:**</u><br>
+    - Compares distributions of life expectancy across countries
+- <u>**Boxplot:**</u><br>
+    - Visualize spread, outliers, mean and median annotations
+- <u>**Scatterplot (with smoothing):**</u><br>
+    - Show life expectancy trends over time (facet per country)
+- <u>**Density Plot:**</u><br>
+    - Compare distribution shapes with mean/median lines by country
+- <u>**Bar Chart:**</u><br>
+    - Displays life expectancy values by year, grouped by country<br>
 
 The following is an explanation of the .jpg epxports and their contents: 
-- LIFE.png:<br>
-    - <u>**Top left:**</u>
+- <u>**LIFE.png:**</u><br>
+    - **Top left:**<br>
         Contians 3 subplots (one for each country) showing the escalations in the mean life expectancies over time for each country.
-    - <u>**Top right:**</u>
+    - **Top right:**<br>
         A plot comparing the mean and median life exectancy values for each country and where they fall on the probability distribution for life expectancy.
-    - <u>**Bottom left:**</u>
+    - **Bottom left:**<br>
         Mean life expecatncies for each country vizualized in a column cahrt format for better comparison across countries for particular years.
-    - <u>**Bottom right:**</u>
+    - **Bottom right:**<br>
         Box plot showing where the mean and median life expectancies fall for each country. The box plot is used to visually convey what data would be considered statistical anomalies (the left edge of each box is the 25th percentile for life expectancy, and the right edge represents the 75th percentile)
-- LIFE2.png:<br>
+- <u>**LIFE2.png:**</u><br>
     - Density plot showing a visual comparison of the probability distributions for each country overlaid on top of each other.
-- AOV Life Expectancies.png<br>
+- <u>**AOV Life Expectancies.png**</u><br>
     - Shows the results of the Tukey comparison and ANOVA.
-- CONF.png<br>
+- <u>**CONF.png**</u><br>
     - Shows the plot representing the % differences in means of each country, within a 95% CI
 
 
