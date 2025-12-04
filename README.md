@@ -3,7 +3,7 @@
 This project demonstrates an end-to-end exploratory data analysis (EDA) of life expectancy trends in Canada, Mexico, and the United States using the Gapminder dataset.
 The workflow demonstrates core data science, data analytics, and data visualization skills in R, including grouped statistical summaries (mean, median, standard deviation), multi-faceted visualization and plot composition with multiple libraries (ggplot2, tidyverse, patchwork, and gridExtra), statistical interference, and more. The code results in a complete suite of visualizations (density plots, boxplots, bar charts, scatterplots with trends) and statistical tests to evaluate differences in life expectancies across countries from 1957–2007. <br><br>
 
-## Explaantion of Contents of this repo:
+## Explanation of Contents of this repo:
 - <u>**AOV Life Expectancies.png**</u><br>
     - Shows the results of the Tukey comparison and ANOVA.
 - <u>**CONF.png**</u><br>
