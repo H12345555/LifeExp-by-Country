@@ -35,76 +35,45 @@ Bar plots with dodge positioning
 Unified multi-plot layouts using grid.arrange(), ideal for dashboards or reports
 Consistent styling (dark theme, custom labels, axis scaling)
 
-Reproducible Workflow
+## Reproducible Workflow
 Programmatically generating and saving figures as .png files
 Modular code organization enabling easy updates or parameter changes
 Clean labeling and theming for professional-quality visual outputs
 
-Project Structure
-1. Load Libraries
+## Project Structure
+### Core packages imported:
+- gapminder (data source)
+- tidyverse (data manipulation + visualization)
+- patchwork & gridExtra (multi-plot layouts)
 
-Imports core packages:
+### Filtered Countries of Interest:
+Data was filtered to include only the following countries from North America:
+- United States
+- Mexico
+- Canada
 
-gapminder (data source)
+### Statistics Analysis:
+Analyzed the following statistical parameters of the dataset.
+- Means
+- Medians
+- Standard deviations
+- ANOVA (Analysis of Variance)
+- 95% Confidence Ineterval Analysis (95% CI)
+- Tukey HSD was used to identify which country pairs differ significantly
 
-tidyverse (data manipulation + visualization)
+### Visualization Summary and .png files exported:
+The following plots and subplots were generated using R code. All visualizations are compiled using grid.arrange() into multi-panel layouts for presentation.
+- Density Plot :	Compares distributions of life expectancy across countries
+- Boxplot:	Visualize spread, outliers, mean and median annotations
+- Scatterplot (with smoothing):	Show life expectancy trends over time (facet per country)
+- Density Plot:	Compare distribution shapes with mean/median lines by country
+- Bar Chart:	Displays life expectancy values by year, grouped by country
 
-patchwork & gridExtra (multi-plot layouts)
-
-2. Filter Countries of Interest
-
-Extracts data for:
-
-United States
-
-Mexico
-
-Canada
-
-3. Calculate Summary Statistics
-
-Creates separate dataframes for:
-
-Means
-
-Medians
-
-Standard deviations
-
-These are reused across multiple plots for annotations and vertical reference lines.
-
-4. Visualizations
-
-Generated plots include:
-
-Plot	Purpose
-Density Plot	Compare distributions of life expectancy across countries
-Boxplot	Visualize spread, outliers, mean and median annotations
-Scatterplot (with smoothing)	Show life expectancy trends over time (facet per country)
-Density Plot (Faceted)	Compare distribution shapes with mean/median lines by country
-Bar Chart	Display life expectancy values by year
-
-All visualizations are compiled using grid.arrange() into multi-panel layouts for presentation.
-
-5. Statistical Testing
-
-Runs:
-
-ANOVA on life expectancy ~ country
-
-Tukey HSD to identify which country pairs differ significantly
-
-Saves plots of the confidence intervals for interpretation
-
-6. Export
-
-Saves final composite figures as:
-
-LIFE.png
-
-LIFE2.png
-
-Ready for use in reports, dashboards, or presentations.
+The following is an explanation of the .jpg epxports and their contents: 
+- LIFE.png
+- LIFE2.png
+- AOV Life Expectancies
+- CONF
 
 
 
