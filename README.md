@@ -9,7 +9,7 @@ The workflow demonstrates core data science, data analytics, and data visualizat
 - <u>**CONF.png**</u><br>
     - Shows the plot representing the % differences in means of each country, within a 95% Confidence Interval (95% CI).
 - <u>**Gapminder Life Expectancies.R:**</u><br>
-    - The R code used to generate all files and visualizations in this repo.
+    - The R code used to generate all files and visualizations in this repo. For more infromation on the particular plots used and their contents, refer to the "Visualizations Summary" section at the bottom of this readme.
 - <u>**LIFE.png:**</u><br>
     - **Top left:**<br>
         - Contains 3 subplots (one for each country) showing the changes in the mean life expectancies over time for each country.
