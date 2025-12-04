@@ -7,7 +7,7 @@ The workflow demonstrates core data science, data analytics, and data visualizat
 - <u>**AOV Life Expectancies.png**</u><br>
     - Shows the results of the Tukey comparison and ANOVA.
 - <u>**CONF.png**</u><br>
-    - Shows the plot representing the % differences in means of each country, within a 95% CI
+    - Shows the plot representing the % differences in means of each country, within a 95% Confidence Interval (95% CI)
 - <u>**Gapminder Life Expectancies.R:**</u><br>
     - The R code used to generate all files and visualizations in this repo.
 - <u>**LIFE.png:**</u><br>
