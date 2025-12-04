@@ -12,7 +12,7 @@ The workflow demonstrates core data science, data analytics, and data visualizat
     - The R code used to generate all files and visualizations in this repo.
 - <u>**LIFE.png:**</u><br>
     - **Top left:**<br>
-        - Contains 3 subplots (one for each country) showing the escalations in the mean life expectancies over time for each country.
+        - Contains 3 subplots (one for each country) showing the changes in the mean life expectancies over time for each country.
     - **Top right:**<br>
         - A plot comparing the mean and median life expectancy values for each country and where they fall on the probability distribution for life expectancy.
     - **Bottom left:**<br>
