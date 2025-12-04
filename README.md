@@ -1,17 +1,34 @@
 # LifeExp-by-Country
 ## Overview
-Using R, performed statistical analysis and data visualization of life expectancies of United States, Canada, and Mexico. This also contains the plots that the R code generates (the code can be found in the Gapminder Life Expectancies.R upload)
-
-
-This project performs an end-to-end exploratory data analysis (EDA) of life expectancy trends in Canada, Mexico, and the United States using the Gapminder dataset.
+This project demonstrates an end-to-end exploratory data analysis (EDA) of life expectancy trends in Canada, Mexico, and the United States using the Gapminder dataset.
 The workflow demonstrates core data science, data analytics, and data visualization skills in R, including grouped statistical summaries (mean, median, standard deviation), multi-faceted visualization and plot composition with multiple libraries (ggplot2, tidyverse, patchwork, and gridExtra), statistical interference, and more. The code results in a complete suite of visualizations (density plots, boxplots, bar charts, scatterplots with trends) and statistical tests to evaluate differences in life expectancies across countries from 1957–2007. <br><br>
+
+## Explaantion of Contents of this repo:
+- <u>**AOV Life Expectancies.png**</u><br>
+    - Shows the results of the Tukey comparison and ANOVA.
+- <u>**CONF.png**</u><br>
+    - Shows the plot representing the % differences in means of each country, within a 95% CI
+- <u>**Gapminder Life Expectancies.R:**</u><br>
+    - The R code used to generate all files and visualizations in this repo.
+- <u>**LIFE.png:**</u><br>
+    - **Top left:**<br>
+        Contains 3 subplots (one for each country) showing the escalations in the mean life expectancies over time for each country.
+    - **Top right:**<br>
+        A plot comparing the mean and median life expectancy values for each country and where they fall on the probability distribution for life expectancy.
+    - **Bottom left:**<br>
+        Mean life expecatncies for each country visualized in a column chart format for better comparison across countries for particular years.
+    - **Bottom right:**<br>
+        Boxplot showing where the mean and median life expectancies fall for each country. The box plot is used to visually convey what data would be considered statistical anomalies (the left edge of each box is the 25th percentile for life expectancy, and the right edge represents the 75th percentile)
+- <u>**LIFE2.png:**</u><br>
+    - Density plot showing a visual comparison of the probability distributions for each country overlaid on top of each other.
+
 
 ## Skills Demonstrated 
 ### Data Wrangling & Tidy Data Principles
 - Filtering data by target countries
 - Grouping and summarizing numeric variables
-- Using the pipe operator (%>%) to structure readable, reproducible workflows
-- Creating derived datasets capturing summary statistics for use across visualizations
+- Using the pipe operator `(%>%)` to create readable, reproducible workflows
+- Creating derived datasets containing summary statistics for use across visualizations
 
 ### Statistical Analysis
 - Descriptive statistics:<br>
@@ -51,7 +68,7 @@ Data was filtered to include only the following countries from North America:
 - Canada<br>
 
 ### Statistics Analysis:
-Analyzed the following statistical parameters of the dataset:
+Analyzed the following statistical parameters in the dataset:
 - Means
 - Medians
 - Standard deviations
@@ -60,33 +77,19 @@ Analyzed the following statistical parameters of the dataset:
 - Tukey HSD was used to identify which country pairs differ significantly<br>
   
 
-### Visualization Summary and .png files exported:
+### Visualizations Summary:
 All visualizations are compiled using grid.arrange() into multi-panel layouts for presentation. Plots & subplots were also saved and exported as .png files, which can also be viewed in this git repository.
 - <u>**Density Plot:**</u><br>
     - Compares distributions of life expectancy across countries
 - <u>**Boxplot:**</u><br>
     - Visualize spread, outliers, mean and median annotations
 - <u>**Scatterplot (with smoothing):**</u><br>
-    - Show life expectancy trends over time (facet per country)
+    - Shows life expectancy trends over time (facet per country)
 - <u>**Density Plot:**</u><br>
     - Compare distribution shapes with mean/median lines by country
 - <u>**Bar Chart:**</u><br>
     - Displays life expectancy values by year, grouped by country
-- <u>**LIFE.png:**</u><br>
-    - **Top left:**<br>
-        Contians 3 subplots (one for each country) showing the escalations in the mean life expectancies over time for each country.
-    - **Top right:**<br>
-        A plot comparing the mean and median life exectancy values for each country and where they fall on the probability distribution for life expectancy.
-    - **Bottom left:**<br>
-        Mean life expecatncies for each country vizualized in a column cahrt format for better comparison across countries for particular years.
-    - **Bottom right:**<br>
-        Box plot showing where the mean and median life expectancies fall for each country. The box plot is used to visually convey what data would be considered statistical anomalies (the left edge of each box is the 25th percentile for life expectancy, and the right edge represents the 75th percentile)
-- <u>**LIFE2.png:**</u><br>
-    - Density plot showing a visual comparison of the probability distributions for each country overlaid on top of each other.
-- <u>**AOV Life Expectancies.png**</u><br>
-    - Shows the results of the Tukey comparison and ANOVA.
-- <u>**CONF.png**</u><br>
-    - Shows the plot representing the % differences in means of each country, within a 95% CI
+
 
 
 
