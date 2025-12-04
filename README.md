@@ -57,7 +57,7 @@ Analyzed the following statistical parameters of the dataset.
 
 ### Visualization Summary and .png files exported:
 The following plots and subplots were generated using R code. All visualizations are compiled using grid.arrange() into multi-panel layouts for presentation.
-- **<u>Density Plot </u>**:	Compares distributions of life expectancy across countries
+- **<u>Density Plot</u>**:	Compares distributions of life expectancy across countries
 - <u>Boxplot</u>:	Visualize spread, outliers, mean and median annotations
 - **Scatterplot (with smoothing)**:	Show life expectancy trends over time (facet per country)
 - Density Plot:	Compare distribution shapes with mean/median lines by country
@@ -65,9 +65,9 @@ The following plots and subplots were generated using R code. All visualizations
 
 The following is an explanation of the .jpg epxports and their contents: 
 - LIFE.png:
-    - Top left:
+    - <u>Top left:</u>
         Contians 3 subplots (one for each country) showing the escalations in the mean life expectancies over time for each country.
-    - Top right:
+    - <u><b>Top right:</u></b>
         A plot comparing the mean and median life exectancy values for each country and where they fall on the probability distribution for life expectancy.
     - Bottom left:
         Mean life expecatncies for each country vizualized in a column cahrt format for better comparison across countries for particular years.
