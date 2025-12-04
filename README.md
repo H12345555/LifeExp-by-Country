@@ -12,13 +12,13 @@ The workflow demonstrates core data science, data analytics, and data visualizat
     - The R code used to generate all files and visualizations in this repo.
 - <u>**LIFE.png:**</u><br>
     - **Top left:**<br>
-        Contains 3 subplots (one for each country) showing the escalations in the mean life expectancies over time for each country.
+        - Contains 3 subplots (one for each country) showing the escalations in the mean life expectancies over time for each country.
     - **Top right:**<br>
-        A plot comparing the mean and median life expectancy values for each country and where they fall on the probability distribution for life expectancy.
+        - A plot comparing the mean and median life expectancy values for each country and where they fall on the probability distribution for life expectancy.
     - **Bottom left:**<br>
-        Mean life expecatncies for each country visualized in a column chart format for better comparison across countries for particular years.
+        - Mean life expecatncies for each country visualized in a column chart format for better comparison across countries for particular years.
     - **Bottom right:**<br>
-        Boxplot showing where the mean and median life expectancies fall for each country. The box plot is used to visually convey what data would be considered statistical anomalies (the left edge of each box is the 25th percentile for life expectancy, and the right edge represents the 75th percentile)
+        - Boxplot showing where the mean and median life expectancies fall for each country. The box plot is used to visually convey what data would be considered statistical anomalies (the left edge of each box is the 25th percentile for life expectancy, and the right edge represents the 75th percentile)
 - <u>**LIFE2.png:**</u><br>
     - Density plot showing a visual comparison of the probability distributions for each country overlaid on top of each other.
 
