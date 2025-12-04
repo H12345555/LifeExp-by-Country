@@ -4,14 +4,7 @@ Using R, performed statistical analysis and data visualization of life expectanc
 
 
 This project performs an end-to-end exploratory data analysis (EDA) of life expectancy trends in Canada, Mexico, and the United States using the Gapminder dataset.
-The workflow demonstrates core data science, data analytics, and data visualization skills in R, including:
-
-
-Grouped statistical summaries (mean, median, standard deviation)
-Multi-facet visualization and plot composition with ggplot2, patchwork, and gridExtra
-Statistical inference using ANOVA and Tukey’s HSD
-Automated export of figures for reporting
-The code results in a complete suite of visualizations (density plots, boxplots, bar charts, scatterplots with trends) and statistical tests to evaluate differences in life expectancy across countries from 1957–2007. <br><br>
+The workflow demonstrates core data science, data analytics, and data visualization skills in R, including grouped statistical summaries (mean, median, standard deviation), multi-faceted visualization and plot composition with multiple libraries (ggplot2, tidyverse, patchwork, and gridExtra), statistical interference, and more. The code results in a complete suite of visualizations (density plots, boxplots, bar charts, scatterplots with trends) and statistical tests to evaluate differences in life expectancies across countries from 1957–2007. <br><br>
 
 ## Skills Demonstrated 
 ### Data Wrangling & Tidy Data Principles
@@ -55,7 +48,7 @@ The code results in a complete suite of visualizations (density plots, boxplots,
 Data was filtered to include only the following countries from North America:
 - United States
 - Mexico
-- Canada<br><br>
+- Canada<br>
 
 ### Statistics Analysis:
 Analyzed the following statistical parameters of the dataset:
@@ -68,7 +61,7 @@ Analyzed the following statistical parameters of the dataset:
   
 
 ### Visualization Summary and .png files exported:
-The following plots and subplots were generated using R code. All visualizations are compiled using grid.arrange() into multi-panel layouts for presentation.
+All visualizations are compiled using grid.arrange() into multi-panel layouts for presentation. Plots & subplots were also saved and exported as .png files, which can also be viewed in this git repository.
 - <u>**Density Plot:**</u><br>
     - Compares distributions of life expectancy across countries
 - <u>**Boxplot:**</u><br>
@@ -78,9 +71,7 @@ The following plots and subplots were generated using R code. All visualizations
 - <u>**Density Plot:**</u><br>
     - Compare distribution shapes with mean/median lines by country
 - <u>**Bar Chart:**</u><br>
-    - Displays life expectancy values by year, grouped by country<br>
-
-The following is an explanation of the .jpg epxports and their contents: 
+    - Displays life expectancy values by year, grouped by country
 - <u>**LIFE.png:**</u><br>
     - **Top left:**<br>
         Contians 3 subplots (one for each country) showing the escalations in the mean life expectancies over time for each country.
