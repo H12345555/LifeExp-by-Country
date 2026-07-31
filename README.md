@@ -1,7 +1,39 @@
-# LifeExp-by-Country
+# LifeExp-by-Country: Canada, Mexico, and The United States
 ## Overview
 This project demonstrates an end-to-end exploratory data analysis (EDA) of life expectancy trends in Canada, Mexico, and the United States using the Gapminder dataset.
-The workflow demonstrates core data science, data analytics, and data visualization skills in R, including grouped statistical summaries (mean, median, standard deviation), multi-faceted visualization and plot composition with multiple libraries (ggplot2, tidyverse, patchwork, and gridExtra), statistical interference, and more. The code results in a complete suite of visualizations (density plots, boxplots, bar charts, scatterplots with trends) and statistical tests to evaluate differences in life expectancies across countries from 1957–2007. <br><br>
+The workflow demonstrates core data science, data analytics, and data visualization skills in R, including grouped statistical summaries (mean, median, standard deviation), multi-faceted visualization and plot composition with multiple libraries (ggplot2, tidyverse, patchwork, and gridExtra), statistical inference, and more. The code results in a complete suite of visualizations (density plots, boxplots, bar charts, scatterplots with trends) and statistical tests to evaluate differences in life expectancies across countries from 1957–2007. <br><br>
+
+## Repository Structure
+
+- **[`images/`](images/)**
+  - `AOV Life Expectancies.png`
+  - `CONF.png`
+  - `LIFE.png`
+  - `LIFE2.png`
+
+- **[`Gapminder Life Expectancies.R`](Gapminder%20Life%20Expectancies.R)**
+  - Main R script used for analysis and visualization
+
+- **`README.md`**
+  - Project overview, methods, visualizations, and findings
+    
+## Project Visualizations
+
+### Life Expectancy Dashboard
+
+![Life expectancy dashboard](images/LIFE.png)
+
+### Country Distribution Comparison
+
+![Life expectancy density comparison](images/LIFE2.png)
+
+### ANOVA and Tukey HSD Results
+
+![ANOVA and Tukey HSD results](images/AOV%20Life%20Expectancies.png)
+
+### Confidence Interval Comparison
+
+![Confidence interval comparison](images/CONF.png)
 
 ## Explanation of Contents of this repo:
 - <u>**AOV Life Expectancies.png**</u><br>
@@ -9,14 +41,14 @@ The workflow demonstrates core data science, data analytics, and data visualizat
 - <u>**CONF.png**</u><br>
     - Shows the plot representing the % differences in means of each country, within a 95% Confidence Interval (95% CI).
 - <u>**Gapminder Life Expectancies.R:**</u><br>
-    - The R code used to generate all files and visualizations in this repo. For more infromation on the particular plots used and their contents, refer to the "Visualizations Summary" section at the bottom of this readme.
+    - The R code used to generate all files and visualizations in this repo. For more information on the particular plots used and their contents, refer to the "Visualizations Summary" section at the bottom of this readme.
 - <u>**LIFE.png:**</u><br>
     - **Top left:**<br>
         - Contains 3 subplots (one for each country) showing the changes in the mean life expectancies over time for each country.
     - **Top right:**<br>
         - A plot comparing the mean and median life expectancy values for each country and where they fall on the probability distribution for life expectancy.
     - **Bottom left:**<br>
-        - Mean life expecatncies for each country visualized in a column chart format for better comparison across countries for particular years.
+        - Mean life expectancies for each country visualized in a column chart format for better comparison across countries for particular years.
     - **Bottom right:**<br>
         - Boxplot showing where the mean and median life expectancies fall for each country. The box plot is used to visually convey what data would be considered statistical anomalies (the left edge of each box is the 25th percentile for life expectancy, and the right edge represents the 75th percentile)
 - <u>**LIFE2.png:**</u><br>
@@ -27,7 +59,7 @@ The workflow demonstrates core data science, data analytics, and data visualizat
 ### Data Wrangling & Tidy Data Principles
 - Filtering data by target countries
 - Grouping and summarizing numeric variables
-- Using the pipe operator `(%>%)` to create readable, reproducible workflows
+- Using the pipe operator `%>%` to create readable, reproducible workflows
 - Creating derived datasets containing summary statistics for use across visualizations
 
 ### Statistical Analysis
@@ -80,13 +112,11 @@ Analyzed the following statistical parameters in the dataset:
 ### Visualizations Summary:
 All visualizations are compiled using grid.arrange() into multi-panel layouts for presentation. Plots & subplots were also saved and exported as .png files, which can also be viewed in this git repository.
 - <u>**Density Plot:**</u><br>
-    - Compares distributions of life expectancy across countries
+    - Compares distribution shapes with mean/median lines by country
 - <u>**Boxplot:**</u><br>
-    - Visualize spread, outliers, mean and median annotations
+    - The boxplot summarizes the distribution of life expectancy values and highlights potential outliers beyond the whiskers.
 - <u>**Scatterplot (with smoothing):**</u><br>
     - Shows life expectancy trends over time (facet per country)
-- <u>**Density Plot:**</u><br>
-    - Compare distribution shapes with mean/median lines by country
 - <u>**Bar Chart:**</u><br>
     - Displays life expectancy values by year, grouped by country
 
